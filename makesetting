@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.26)
+project(Code)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(dim)
+find_package( OpenCV REQUIRED )
+add_executable(Code
+        dim/functions.h
+        dim/functions.hpp
+        dim/Image.cpp
+        dim/Image.h
+        dim/main.cpp)
+target_link_libraries(Code ${OpenCV_LIBS} )
